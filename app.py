@@ -3,7 +3,8 @@ from PIL import Image
 import numpy as np
 
 # import predictors
-from predictors.swin import predictor as swin_predictor, CLASS_NAMES as SWIN_CLASSES
+from predictors.swin_s import predictor as swin_s_predictor, CLASS_NAMES as SWIN_S_CLASSES
+from predictors.swin_b import predictor as swin_b_predictor, CLASS_NAMES as SWIN_B_CLASSES
 from predictors.densenet import predictor as densenet_predictor, CLASSES as DENSENET_CLASSES
 from predictors.efficientnet import predictor as efficientnet_predictor, CLASSES as EFFICIENTNET_CLASSES
 from predictors.resnet import predictor as resnet_predictor, CLASSES as RESNET_CLASSES
@@ -14,7 +15,7 @@ st.set_page_config(page_title="Chest X-ray Classification", layout="centered")
 st.title("Chest X-ray Classification System")
 
 # --- MODEL SELECTION ---
-model_options = ["Swin-B", "DenseNet", "EfficientNet", "ResNet"]
+model_options = ["Swin-S", "Swin-B", "DenseNet121", "EfficientNetB0", "ResNet50"]
 model_choice = st.selectbox("Choose a model for classification", model_options)
 
 # --- FILE UPLOADER ---
@@ -35,16 +36,19 @@ if uploaded_file:
             img_arr = np.array(image)
 
             # Select correct model
-            if model_choice == "Swin-B":
-                preds = swin_predictor(img_arr)
-                classes = SWIN_CLASSES
-            elif model_choice == "DenseNet":
+            if model_choice == "Swin-S":
+                preds = swin_s_predictor(img_arr)
+                classes = SWIN_S_CLASSES
+            elif model_choice == "Swin-B":
+                preds = swin_b_predictor(img_arr)
+                classes = SWIN_B_CLASSES    
+            elif model_choice == "DenseNet121":
                 preds = densenet_predictor(img_arr)
                 classes = DENSENET_CLASSES
-            elif model_choice == "EfficientNet":
+            elif model_choice == "EfficientNetB0":
                 preds = efficientnet_predictor(img_arr)
                 classes = EFFICIENTNET_CLASSES
-            elif model_choice == "ResNet":
+            elif model_choice == "ResNet50":
                 preds = resnet_predictor(img_arr)
                 classes = RESNET_CLASSES
             else:
