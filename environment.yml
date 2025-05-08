@@ -1,0 +1,20 @@
+name: cxr_app
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
+      - tensorflow
+      - streamlit
+      - pillow
+      - matplotlib
+      - numpy
+      - opencv-python
+      - pandas
+      - scikit-learn
