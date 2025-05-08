@@ -1,6 +1,6 @@
 import os
 import torch
-from torchvision.models import swin_b
+from torchvision.models import swin_s
 from torchvision import transforms
 from PIL import Image
 import numpy as np
@@ -19,7 +19,7 @@ IMG_SIZE = 224
 
 # Load model once at import time
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-_model = swin_b(weights=None, num_classes=len(CLASS_NAMES))
+_model = swin_s(weights=None, num_classes=len(CLASS_NAMES))
 _model.to(device)
 _ckpt = torch.load(CHECKPOINT_PATH, map_location=device)
 _model.load_state_dict(_ckpt, strict=False)
