@@ -14,7 +14,7 @@ IMG_SIZE = (512, 512)
 INPUT_SHAPE = (IMG_SIZE[0], IMG_SIZE[1], 3)
 MODEL_VARIANT = 'EfficientNetB0'
 DROPOUT_RATE = 0.3
-best_checkpoint_path = "models/EfficientNetB0.h5"
+best_checkpoint_path = "models/efficientnet.weights.h5"
 
 def preprocess_image(image_cv2):
     img_resized = cv2.resize(image_cv2, IMG_SIZE, interpolation=cv2.INTER_AREA)
