@@ -30,6 +30,18 @@ if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
     st.image(image, caption="Uploaded Image", use_container_width=True)
 
+    # True label selection     
+    true_labels = {
+        "Atelectasis": "Atelectasis",
+        "Cardiomegaly": "Cardiomegaly",
+        "Effusion": "Effusion",
+        "Nodule": "Nodule",
+        "Pneumothorax": "Pneumothorax"
+    }   
+    true_label = st.selectbox("True label (optional):", options=true_labels, index=0)
+    st.markdown(f"### ✅ True Label: `{true_label}`")
+
+
     # Classification button
     if st.button("Classify"):
         with st.spinner("Running inference…"):
