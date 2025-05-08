@@ -1,0 +1,41 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environment files
+.env
+.venv
+env/
+venv/
+
+# TensorBoard logs (if you don't want to track them)
+runs/
+
+# Data folder (if you want to keep large files out of Git)
+data*/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+*.bmp
+
+# Model files
+models/
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.onnx
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+runs/
+
