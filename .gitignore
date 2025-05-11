@@ -38,4 +38,7 @@ Thumbs.db
 
 # Log files
 runs/
+checkpoints*/
+logs*/
+
 
