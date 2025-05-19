@@ -31,6 +31,7 @@ project_root/
 │
 ├── app.py                        # Streamlit app
 ├── ensemble.py                   # Ensemble logic
+├── models/                       # Model weights
 ├── predictors/
 │   ├── swin_s.py
 │   ├── swin_b.py
