@@ -88,7 +88,7 @@ streamlit run app.py
 * Review the predicted probabilities per condition
 * Optionally assign a **true label** to track evaluation accuracy
 
-![img](/assets/ss1.png)
+![img](/assets/ss1.jpeg)
 
 ## 📦 Requirements
 
