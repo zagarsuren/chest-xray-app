@@ -19,7 +19,6 @@ runs/
 data*/
 *.png
 *.jpg
-*.jpeg
 *.gif
 *.tiff
 *.bmp
