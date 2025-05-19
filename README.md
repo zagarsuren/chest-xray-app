@@ -40,7 +40,7 @@ project_root/
 │   ├── inception.py
 │   └── yolov11s.py
 ├── requirements.txt              # Dependencies
-└── README.md                     # This file
+└── README.md                     
 ```
 
 ## ⚙️ Features
@@ -88,6 +88,8 @@ streamlit run app.py
 * Review the predicted probabilities per condition
 * Optionally assign a **true label** to track evaluation accuracy
 
+![img](/assets/ss1.png)
+
 ## 📦 Requirements
 
 * Python 3.10+
@@ -101,9 +103,9 @@ streamlit run app.py
 > This tool is intended for research and educational purposes only and **must not** be used for clinical diagnosis or treatment decisions.
 
 ## 🧑‍💻 Contributors
-**Zagarsuren Sukhbaatar**
-**Diego Alejandro Ramirez Vargas**
-**Shudarshan Singh Kongkham**
+**Zagarsuren Sukhbaatar** <br>
+**Diego Alejandro Ramirez Vargas**<br>
+**Shudarshan Singh Kongkham**<br>
 **Dhruv Harish Punjwani**
 
 ## 📝 License
